@@ -1,0 +1,339 @@
+/* chat.css */
+
+.chat-room {
+  display: flex;
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the user list (30%) */
+.user-list {
+  width: 20%;
+  padding: 10px;
+  border-right: 1px solid #ccc;
+
+  /* Add any other styles you need */
+}
+
+/* Styles for the chat interface (70%) */
+.chat-interface {
+  width: 80%;
+  padding: 10px;
+  /* Add any other styles you need */
+}
+
+.user-list-title{
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  /* Add any other styles you need */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Chat room container */
+.chat-room-container {
+  display: flex;
+  flex-direction: column;
+  overflow-y:auto ;
+  height: 100vh; /* Full viewport height */
+}
+
+/* chat.css */
+
+/* Room ID display */
+.room-id {
+  padding: 20px;
+  font-size: 18px;
+  background-color: #58595b; /* GitHub's primary background color */
+  color: white; /* White text */
+  font-weight: bold; /* Make the text bold */
+  font-style: italic; /* Make the text italic */
+  font-family: 'Arial', sans-serif; /* Change the font family as needed */
+  border-radius: 5px;
+  /* Add more styling properties if desired */
+}
+
+
+/* Messages container */
+.messages-container {
+  flex: 1; /* Grow to fill remaining space */
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f8fa; /* GitHub's secondary background color */
+  position: relative;
+  height: 70px;
+}
+
+/* Messages list (conversation area) */
+.messages-list {
+  list-style: none;
+  padding: 20px;
+  flex: 1; /* Grow to fill remaining space */
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start; /* Messages aligned to the left */
+}
+
+/* Individual message item */
+.message-item {
+  max-width: 70%;
+  padding: 5px;
+  /* padding-bottom: 0px; */
+  border-radius: 5px;
+  word-wrap: break-word; /* Wrap long words */
+}
+
+/* Your messages (right-aligned) */
+.my-message {
+  background-color: #007bff; /* GitHub's primary color */
+  color: #fff;
+  align-self: flex-end;
+}
+
+/* Received messages (left-aligned) */
+.received-message {
+  background-color: #e1e1e1; /* Light gray */
+  color: #333;
+  align-self: flex-start;
+}
+
+/* New message input field */
+
+
+/* Send message button */
+.send-message-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Send message button on hover */
+.send-message-button:hover {
+  background-color: #0056b3; /* Slightly darker blue on hover */
+}
+/* chat.css */
+
+/* Container for the entire page */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f6f8fa; /* GitHub's secondary background color */
+}
+
+/* Header with logo and title */
+.join-header {
+  text-align: center;
+}
+
+/* Logo icon */
+.join-logo {
+  font-size: 48px;
+  color: #007bff; /* GitHub's primary color */
+}
+
+/* Page title */
+.page-title {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+/* Main content container */
+.join-main {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Form control styles */
+.form-control {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Form label styles */
+.form-label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Input styles */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Join Chat button styles */
+.join-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+}
+
+/* Join Chat button hover effect */
+.join-button:hover {
+  background-color: #0056b3;
+}
+/* chat.css */
+/* chat.css */
+
+/* Page title with a fancy text animation */
+.page-title {
+  font-size: 24px;
+  margin: 20px 0;
+  position: relative;
+  display: inline-block;
+  color: #007bff;
+  animation: textAnimation 2s ease-in-out infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes textAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+    color: #0056b3; /* Slightly darker blue */
+  }
+  100% {
+    transform: scale(1);
+    color: #007bff; /* Return to the original color */
+  }
+}
+
+
+.message-sender {
+  font-weight: bold;
+  color: black;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Define the fade-in animation class */
+.fade-in {
+  animation: fadeIn 1s ease; /* Use the previously defined animation */
+}
+
+
+
+/* Add more styles to the user list */
+.user-list {
+  width: 30%; /* Set the width of the user list */
+  padding: 10px;
+  border-right: 1px solid #ccc;
+  background-color: #f4f4f4;
+  overflow-y: auto; /* Add a vertical scroll if needed */
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to the right side */
+}
+
+/* Style for the user list title */
+.user-list-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Style for the list of users */
+.user-list ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style for each user in the list */
+.user-list li {
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+  font-size: 20px;
+  color: #333;
+}
+
+/* Highlight the last user in the list */
+.user-list li:last-child {
+  border-bottom: none;
+  font-weight: bold;
+  /* color: #3498db;  */
+}
+
+/* Hover effect for user list items */
+.user-list li:hover {
+  background-color: #e0e0e0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  position: relative;
+}
+.input-container input {
+  flex: 1;
+  border: none;
+  background-color: #fff;
+  padding: 10px;
+  font-size: 16px;
+  
+}
+.input-container button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  /* padding: 10px 20px; */
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+.new-message-input-field {
+  border: none;
+  /* border-top: 1px solid #ccc; Separator line */
+  /* padding: 15px; */
+  outline: none;
+  background-color: #fff;
+  resize: none; /* Prevent textarea resizing */
+  font-size: 16px;
+}

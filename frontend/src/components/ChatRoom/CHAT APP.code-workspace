@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../../CHAT APP"
+		},
+		{
+			"path": "../../../../../../auth"
+		},
+		{
+			"path": "../../../../../../chatapp"
+		},
+		{
+			"path": "../../../../.."
+		},
+		{
+			"path": "../../../../../../Back"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "chatapp"
+	}
+}

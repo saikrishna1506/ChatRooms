@@ -1,0 +1,210 @@
+/* Landing.css */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* Common styles for larger screens */
+.landing-container {
+  background: linear-gradient(45deg, #292b2c, #1d1f20);
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.landing-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  color: white;
+}
+
+.landing-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Adjusted to place links on the right */
+  z-index: 1; /* Set a higher z-index value */
+}
+
+.navbar-logo {
+  font-family: 'Pacifico', cursive; /* Apply the custom font */
+  font-size: 28px;
+  font-weight: bold;
+  color: white; /* Font color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for highlight effect */
+}
+
+/* Common styles for larger screens */
+.navbar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navbar-menu li {
+  margin-right: 50px;
+}
+/* Landing.css */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.typing-title {
+  font-family: 'Pacifico', cursive;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 1px solid white; /* Typing cursor effect */
+  animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+
+/* Ensure .landing-navbar is styled as flex with justify-content: space-between */
+.landing-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+/* Adjust the .navbar-menu to make it flex and align to the right */
+.navbar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navbar-menu li {
+  margin-left: 20px; /* Change margin-left to add space between menu items */
+  margin-bottom: 10px;
+  display: flex;
+}
+
+/* The rest of the CSS remains the same */
+.navbar-link {
+  text-decoration: none;
+  color: white; 
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar-link:hover {
+  color: #3498db; /* Change to your desired hover color */
+}
+
+
+.landing-main {
+  text-align: center;
+  z-index: 1;
+}
+
+.landing-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.landing-description {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.landing-cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.landing-cta-button:hover {
+  background-color: #2980b9; /* Change to your desired hover background color */
+}
+
+/* Common styles for larger screens */
+.background-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(142,21,119,1) 34%, rgba(0,212,255,1) 100%);
+  background-size: 200% 200%;
+  animation: gradient 8s infinite;
+  opacity: 0.8;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Media query for smaller screens (adjust breakpoints as needed) */
+@media (max-width: 768px) {
+  .landing-header {
+    padding: 10px;
+  }
+
+  .navbar-logo {
+    font-size: 20px;
+  }
+
+  .navbar-menu li {
+    margin-right: 10px;
+  }
+
+  .navbar-link {
+    font-size: 14px;
+  }
+
+  .landing-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .landing-description {
+    font-size: 14px;
+  }
+
+  .landing-cta-button {
+    padding: 8px 16px;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+}
+
