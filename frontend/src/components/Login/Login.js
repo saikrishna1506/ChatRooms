@@ -14,7 +14,7 @@ function Login() {
     axios.defaults.withCredentials = true;
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post('http://localhost:3001/login', {email, password})
+        axios.post('https://chatrooms-saikrishna.vercel.app/login', {email, password})
         // axios.post('login', {email, password})
         // https://mernbackend-21qk.onrender.com/
         .then(res => {
