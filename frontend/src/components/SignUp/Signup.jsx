@@ -13,7 +13,7 @@ function Signup() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post('http://localhost:3001/register', {name, email, password})
+        axios.post('https://chatrooms-saikrishna.vercel.app/register', {name, email, password})
         // https://mernbackend-21qk.onrender.com/
 
         .then(res => {
