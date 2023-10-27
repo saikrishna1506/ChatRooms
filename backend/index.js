@@ -15,7 +15,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: ["https://chatrooms-saikrishna01.vercel.app","*"],
+    origin: ["https://chatrooms-saikrishna01.vercel.app"],
     methods: ["GET", "POST"],
     credentials: true,
   })
