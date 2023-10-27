@@ -112,9 +112,8 @@ app.post("/login", (req, res) => {
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: "https://chatrooms-saikrishna01.vercel.app",
-    methods: ["GET", "POST"],
-    credentials: true,
+    origin: "*"
+    
   },
 });
 
