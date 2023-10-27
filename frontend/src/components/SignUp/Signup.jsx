@@ -10,7 +10,7 @@ function Signup() {
     const [errorMessage, setErrorMessage] = useState(""); // Add state for error message
 
     const navigate = useNavigate()
-
+axios.defaults.withCredentials=true;
     const handleSubmit = (e) => {
         e.preventDefault()
         axios.post('https://chatrooms-saikrishna.vercel.app/register', {name, email, password})
