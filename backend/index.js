@@ -4,7 +4,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const bcrypt = require("bcrypt");
+// const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const cookieParser = require("cookie-parser");
 const UserModel = require("./models/User");
@@ -61,40 +61,53 @@ app.get("/dashboard", varifyUser, (req, res) => {
 
 app.post("/register", (req, res) => {
   const { name, email, password } = req.body;
-  bcrypt
-    .hash(password, 10)
-    .then((hash) => {
-      UserModel.create({ name, email, password: hash })
-        .then((user) => res.json("Success"))
-        .catch((err) => res.json(err));
-    })
-    .catch((err) => res.json(err));
-});
-
+  // bcrypt.hash(password, 10).then((hash) => {
+    UserModel.create({ name, email, password }).then((user) => res.json("Success")).catch((err) => res.json(err));})
+    // .catch((err) => res.json(err));
+  // });
+// UserModel.findOne({ email: email })
+//     .then((user) => {
+//       if (user) {
+//         bcrypt.compare(password, user.password, (err, response) => {
+//           if (response) {
+//             const token = jwt.sign(
+//               { email: user.email, role: user.role },
+//               "jwt-secret-key",
+//               { expiresIn: "1d" }
+//             );
+//             res.cookie("token", token);
+//             return res.json({ Status: "Success", role: user.role });
+//           } else {
+//             return res.json("The password is incorrect");
+//           }
+//         });
+//       } else {
+//         return res.json("No record exists...");
+//       }
+//     });
 app.post("/login", (req, res) => {
   const { email, password } = req.body;
-  UserModel.findOne({ email: email })
-    .then((user) => {
-      if (user) {
-        bcrypt.compare(password, user.password, (err, response) => {
-          if (response) {
-            const token = jwt.sign(
-              { email: user.email, role: user.role },
-              "jwt-secret-key",
-              { expiresIn: "1d" }
-            );
-            res.cookie("token", token);
-            return res.json({ Status: "Success", role: user.role });
-          } else {
-            return res.json("The password is incorrect");
-          }
-        });
-      } else {
-        return res.json("No record exists...");
-      }
-    });
-});
-
+  UserModel.findOne({email:email}).then((user)=>{
+    if(user){
+      
+      // Check if the provided password matches the user's password (you should compare securely in production)
+      if(user.password===password){
+        // req.session.loggedIn = true;
+  
+        // Optionally, you can return user information as part of the response
+        res.json({ Status: "Success", user: user });
+      
+      } 
+      else if (user.password !== password) {
+    return res.json("The password is incorrect"+password+" "+user.password);
+  }
+    }
+    else if (!user) {
+      return res.json("No record exists...");
+    }
+    
+  })
+})
 // Create an HTTP server that combines both your Express app and Socket.IO server
 const server = http.createServer(app);
 const io = socketIo(server, {
