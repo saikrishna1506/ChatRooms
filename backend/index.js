@@ -32,7 +32,9 @@ console.log("mongodb connected");
 //     path.join(__dirname,"../frontend/build/index")
 //   )
 // })
-
+app.get("/",(req,res)=>{
+  res.json("Hello");
+})
 
 const varifyUser = (req, res, next) => {
   const token = req.cookies.token;
