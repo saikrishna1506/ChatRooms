@@ -15,7 +15,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: ["http://localhost:3000","*"],
+    origin: ["https://chatrooms-saikrishna01.vercel.app","*"],
     methods: ["GET", "POST"],
     credentials: true,
   })
