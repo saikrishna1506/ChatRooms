@@ -2,7 +2,7 @@ import {useEffect,useRef,useState,UseState} from "react"
 import socketIOClient from 'socket.io-client'
 const connectedUsers={};
 const NEW_CHAT_MESSAGE_EVENT="newChatMessage"
-const SOCKET_SERVER_URL="https://chatrooms-saikrishna.vercel.app"
+const SOCKET_SERVER_URL="https://chatrooms-backend1.onrender.com"
 
 
 
