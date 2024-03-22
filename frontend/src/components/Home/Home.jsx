@@ -18,11 +18,11 @@ function Home() {
     <div className="page-container">
       <header className="join-header">
         <i className="fas fa-smile join-logo"></i>
-        <h1 className="page-title">LocalChat</h1>
+        <h1 className="page-title">ChatRooms</h1>
       </header>
-      <main className="join-main">
-        <form>
-          <div className="form-control">
+      <main className="join-main container-fluid ">
+        <form className='rounded-sm w-100 w-md-50 w-lg-25'>
+          <div className="form-control ">
             <label htmlFor="username" className="form-label">Username</label>
             <input
               type="text"

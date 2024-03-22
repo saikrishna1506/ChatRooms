@@ -3,13 +3,14 @@ import useChat from "../../useChat";
 import "./chat.css";
 import { useParams } from "react-router-dom";
 import ReactScrollToBottom from "react-scroll-to-bottom";
-
 const ChatRoom = (props) => {
   // const { roomId } = useParams();
   const { roomId, userName } = useParams();
   console.log(roomId);
   const { messages, sendMessage } = useChat(roomId);
   const [newMessage, setNewMessage] = React.useState("");
+  
+  // const [showUserList, setShowUserList] = useState(false); // State to manage user list visibility/
   // const [user, setUser] = useState("");
   //to display the users
   // const [username,setUsername]=useState("");
@@ -43,9 +44,10 @@ const ChatRoom = (props) => {
   }
 
   return (
+    
     <div className="chat-room">
       
-      <div className="user-list">
+      <div className="user-list ">
       <p className="user-list-title">Users in the Room:</p>
         <ol>
           {getUniqueUserNames(messages).map((userName, i) => (
@@ -53,7 +55,9 @@ const ChatRoom = (props) => {
             
           ))}
         </ol>
+        
       </div>
+      
       <div className="chat-room-container chat-interface">
         <div className="room-id">Room id : {roomId}</div>
         {/* <div className="room-id">userName : {userName}</div> */}

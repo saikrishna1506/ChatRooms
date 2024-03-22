@@ -27,6 +27,42 @@
   color: #333;
   /* Add any other styles you need */
 }
+@media (max-width: 768px) {
+  .chat-interface{
+    width: 100%;
+  }
+  .input-container{
+    width: 100%;
+  }
+  .input-container button{
+    font-size: 16px;
+  }
+}
+.max-width-lg {
+  max-width: 400px; /* Adjust as needed */
+  margin: auto; /* Center the form horizontally */
+}
+  /* .user-list {
+    display: none; /* Hide user list for mobile devices */
+   /* }   */
+  
+  /* Show three lines of user list as a button */
+  /* .show-user-list-button {
+    display: block; /* Display the button for mobile devices */
+  /* } */ 
+
+  /* .user-list-mobile {
+    display: none; /* Hide the user list initially on mobile */
+    /* max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  } */ 
+
+  /* .user-list-mobile.show {
+    display: block; /* Show the user list when button is clicked */
+    /* max-height: 150px; Adjust height as needed */
+  /* } */
+/* }/ */ 
 
 
 
@@ -323,7 +359,7 @@
   background-color: #007bff;
   color: #fff;
   border: none;
-  /* padding: 10px 20px; */
+  padding: 10px 20px;
   cursor: pointer;
   font-size: 16px;
   border-radius: 5px;
