@@ -176,6 +176,9 @@
 
 /* Media query for smaller screens (adjust breakpoints as needed) */
 @media (max-width: 768px) {
+  .typing-title{
+    font-size:24px;
+  }
   .landing-header {
     padding: 10px;
   }
